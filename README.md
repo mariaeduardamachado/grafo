@@ -30,7 +30,10 @@ O sistema implementa um grafo não direcionado utilizando lista de adjacência e
 ```txt
 grafo/
 │
-├── grafo.js
+├── src/
+    ├── grafo.js
+├──testes
+   ├── grafo.test.js
 └── README.md
 ```
 
