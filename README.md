@@ -33,9 +33,11 @@ O sistema implementa um grafo não direcionado utilizando lista de adjacência e
 grafo/
 │
 ├── src/
-    ├── grafo.js
-├── testes
-    ├── grafo.test.js
+│   └── grafo.js
+│
+├── testes/
+│   └── grafo.test.js
+│
 ├── package.json
 └── README.md
 ```
@@ -71,7 +73,7 @@ npm install
 ## 4. Executar o programa
 
 ```bash
-node grafo.js
+node src/grafo.js
 ```
 
 ---
