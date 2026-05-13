@@ -63,7 +63,7 @@ class Grafo {
     return this.listaAdjacencia[vertice].length;
   }
 
-  // Buscar caminho usando BFS
+  // Encontrar caminho usando BFS
   encontrarCaminho(inicio, fim) {
     let fila = [[inicio]];
     let visitados = new Set();
@@ -96,7 +96,7 @@ class Grafo {
     for (let vertice in this.listaAdjacencia) {
       for (let vizinho of this.listaAdjacencia[vertice]) {
 
-        // Evita arestas duplicadas
+        // Evita duplicar arestas
         if (vertice <= vizinho) {
           resultado += `  ${vertice} -- ${vizinho}\n`;
         }
@@ -109,40 +109,38 @@ class Grafo {
   }
 }
 
-// Exportar a classe
-module.exports = Grafo;
-
 /* ===========================
    EXECUÇÃO DO PROGRAMA
 =========================== */
 
 const grafo = new Grafo();
 
+// Adicionando arestas
 grafo.adicionarAresta('A', 'B');
 grafo.adicionarAresta('B', 'C');
 grafo.adicionarAresta('C', 'D');
-grafo.adicionarAresta('A', 'A');
+grafo.adicionarAresta('A', 'A'); // Laço
 
-// Lista
+// Exibir lista
 console.log("===== LISTA DE ADJACÊNCIA =====");
 console.log(grafo.listaAdjacencia);
 
-// Laços
+// Quantidade de laços
 console.log("\n===== QUANTIDADE DE LAÇOS =====");
 console.log(grafo.contarLacos());
 
-// Completo
+// Verificar se é completo
 console.log("\n===== O GRAFO É COMPLETO? =====");
 console.log(grafo.ehCompleto());
 
-// Grau
+// Grau do vértice
 console.log("\n===== GRAU DO VÉRTICE A =====");
 console.log(grafo.grauVertice('A'));
 
-// Caminho
+// Caminho entre vértices
 console.log("\n===== CAMINHO DE A ATÉ D =====");
 console.log(grafo.encontrarCaminho('A', 'D'));
 
-// DOT
+// Formato DOT
 console.log("\n===== FORMATO DOT =====");
 console.log(grafo.paraDOT());
