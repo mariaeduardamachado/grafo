@@ -1,6 +1,6 @@
 # Projeto de Grafo em JavaScript
 
-Projeto desenvolvido para a disciplina de Representação de Conhecimento e Engenharia Ontológica.
+Projeto desenvolvido para a disciplina de Estrutura de Dados II.
 
 O sistema implementa um grafo não direcionado utilizando lista de adjacência e possui funcionalidades básicas de manipulação e análise de grafos.
 
